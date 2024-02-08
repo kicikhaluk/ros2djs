@@ -510,7 +510,7 @@ const transpile = {
               break;
             }
             case 'createjs': {
-              importString = "import * as createjs from 'createjs-module';"
+              importString = "import * as createjs from 'createjs';"
               break;
             }
             default: {
