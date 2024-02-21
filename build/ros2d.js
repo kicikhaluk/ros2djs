@@ -1969,7 +1969,7 @@ var ROS2D = (function (exports, createjs, ROSLIB) {
         ros : ros,
         name : topic,
         messageType : 'nav_msgs/OccupancyGrid',
-        compression : 'png'
+        // compression : 'png'
       });
 
       rosTopic.subscribe(function(message) {
@@ -2035,8 +2035,8 @@ var ROS2D = (function (exports, createjs, ROSLIB) {
       var rosService = new ROSLIB__namespace.Service({
         ros : ros,
         name : service,
-        serviceType : 'nav_msgs/GetMap',
-        compression : 'png'
+        messageType : 'nav_msgs/OccupancyGrid',
+        // compression : 'png'
       });
 
       rosService.callService(new ROSLIB__namespace.ServiceRequest(),function(response) {

@@ -30,8 +30,8 @@ ROS2D.OccupancyGridSrvClient = function(options) {
   var rosService = new ROSLIB.Service({
     ros : ros,
     name : service,
-    serviceType : 'nav_msgs/GetMap',
-    compression : 'png'
+    messageType : 'nav_msgs/OccupancyGrid',
+    // compression : 'png'
   });
 
   rosService.callService(new ROSLIB.ServiceRequest(),function(response) {

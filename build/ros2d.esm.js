@@ -1923,7 +1923,7 @@ var OccupancyGridClient = /*@__PURE__*/(function (EventEmitter2) {
       ros : ros,
       name : topic,
       messageType : 'nav_msgs/OccupancyGrid',
-      compression : 'png'
+      // compression : 'png'
     });
 
     rosTopic.subscribe(function(message) {
@@ -1982,8 +1982,8 @@ var OccupancyGridSrvClient = /*@__PURE__*/(function (EventEmitter2) {
     var rosService = new ROSLIB.Service({
       ros : ros,
       name : service,
-      serviceType : 'nav_msgs/GetMap',
-      compression : 'png'
+      messageType : 'nav_msgs/OccupancyGrid',
+      // compression : 'png'
     });
 
     rosService.callService(new ROSLIB.ServiceRequest(),function(response) {
