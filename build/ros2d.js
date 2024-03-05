@@ -1969,7 +1969,7 @@ var ROS2D = (function (exports, createjs, ROSLIB) {
         ros : ros,
         name : topic,
         messageType : 'nav_msgs/OccupancyGrid',
-        // compression : 'png'
+        compression : 'cbor'
       });
 
       rosTopic.subscribe(function(message) {

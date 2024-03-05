@@ -1948,7 +1948,7 @@ var OccupancyGridClient = /*@__PURE__*/(function (EventEmitter2) {
       ros : ros,
       name : topic,
       messageType : 'nav_msgs/OccupancyGrid',
-      // compression : 'png'
+      compression : 'cbor'
     });
 
     rosTopic.subscribe(function(message) {
